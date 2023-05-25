@@ -1,0 +1,206 @@
+.Sidebar {
+  width: calc(260px);
+  height: calc(100vh - 50px);
+  background: rgba(157, 175, 170, 0.5);
+  border-right: 1px solid #a8a7a7cc;
+  color: #fff;
+
+  &.show {
+    animation-name: showing;
+    animation-duration: 0.4s;
+  }
+
+  &.hide {
+    animation-name: hiding;
+    animation-duration: 0.7s;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  .workSpace {
+    padding: 12px 12px;
+    border-bottom: 1px solid #cccc;
+    .workSpace__wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      .close__btn {
+        justify-items: flex-end;
+        cursor: pointer;
+        padding: 8px 8px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background-color: rgba(170, 170, 170, 0.4);
+        }
+      }
+
+      .workSpace__icon {
+        margin-right: 8px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          var(--ds-background-accent-purple-bolder, #403294),
+          var(--ds-background-accent-blue-bolder, #0747a6)
+        );
+      }
+
+      .workSpace__info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex: 1;
+
+        .workSpace__name {
+          font-weight: bold;
+        }
+
+        .workSpace__desc {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .others {
+    padding: 12px 0;
+    font-size: 14px;
+
+    .board,
+    .member,
+    .settingWorkSpace {
+      padding: 8px 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &:hover {
+        background-color: rgba(170, 170, 170, 0.4);
+      }
+
+      &__text {
+        flex: 1;
+        line-height: 16px;
+      }
+
+      &__add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 4px;
+        border-radius: 3px;
+        &:hover {
+          background-color: rgba(170, 170, 170, 0.6);
+        }
+      }
+    }
+
+    .yourBoards {
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &__text {
+        flex: 1;
+        line-height: 16px;
+      }
+      &__add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 4px;
+        border-radius: 3px;
+        &:hover {
+          background-color: rgba(170, 170, 170, 0.6);
+        }
+      }
+    }
+
+    .boardItem {
+      display: flex;
+      padding: 4px 12px;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(170, 170, 170, 0.6);
+      }
+
+      &.active {
+        background-color: rgba(170, 170, 170, 0.6);
+      }
+
+      .boardItem__icon {
+        margin-right: 8px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          var(--ds-background-accent-purple-bolder, #403294),
+          var(--ds-background-accent-blue-bolder, #0747a6)
+        );
+      }
+    }
+  }
+}
+
+.Sidebar__hidden {
+  width: 15px;
+  height: calc(100vh - 50px);
+  background: rgba(157, 175, 170, 0.2);
+  position: relative;
+
+  .Sidebar__icon-show {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8b8b8b;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(141, 141, 141, 0.6);
+    cursor: pointer;
+    &:hover {
+      background: rgba(141, 141, 141, 1);
+    }
+  }
+}
+
+@keyframes showing {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes hiding {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300px);
+    display: none;
+  }
+}

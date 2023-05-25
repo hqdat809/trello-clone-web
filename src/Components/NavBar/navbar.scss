@@ -1,0 +1,173 @@
+.navbar-container {
+  height: 48px;
+  // background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: rgba(141, 141, 141, 0.5);
+  justify-content: space-between;
+  border-bottom: 1px solid #a8a7a7cc;
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 12px;
+    .logo {
+      align-items: center;
+      margin-bottom: 4px;
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 0 8px;
+      &:hover {
+        background-color: #dbdbdb67;
+      }
+
+      .logo-img {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(https://a.trellocdn.com/prgb/assets/87e1af770a49ce8e84e3.gif);
+        width: 75px;
+        height: 32px;
+        display: flex;
+      }
+    }
+
+    .menu-icon {
+      padding: 0 4px;
+      border-radius: 6px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: #dbdbdb67;
+      }
+    }
+
+    .menu-icon,
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .select-workSpace,
+    .select-boards {
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+
+      .select {
+        height: 28px;
+        border: none;
+        width: auto;
+        font-size: 14px;
+
+        &:hover {
+          background-color: #dbdbdb67;
+        }
+        fieldset {
+          border: none;
+        }
+
+        .select-icon {
+          color: #fff;
+          font-size: 20px;
+        }
+
+        .MuiSelect-select {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+
+    .search {
+      background-color: #80c3b233;
+      padding: 0 6px;
+      display: flex;
+      align-items: center;
+      height: 32px;
+      max-width: calc(200px - 12px);
+      border-radius: 6px;
+      border: 1px solid #6e6e6e33;
+
+      &-icon {
+        color: #fff;
+        font-size: 18px;
+      }
+      &-input {
+        background-color: transparent;
+        border: none;
+        color: #f3eded;
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      gap: 8px;
+
+      span {
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: #dbdbdb67;
+        }
+      }
+      path {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .avt {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+      margin-left: 5px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: #dbdbdb67;
+      }
+    }
+  }
+}
+
+.MuiList-root {
+  .menuItem_wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .menuItem_icon {
+      margin-right: 5px;
+      padding: 4px 8px;
+      border-radius: 2px;
+      color: #fff;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        var(--ds-background-accent-purple-bolder, #403294),
+        var(--ds-background-accent-blue-bolder, #0747a6)
+      );
+    }
+  }
+
+  .select-label.Mui-selected {
+    display: none !important;
+  }
+}

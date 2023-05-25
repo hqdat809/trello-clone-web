@@ -1,0 +1,122 @@
+.home-container {
+  height: calc(100vh);
+  background-color: rgb(8, 136, 93);
+}
+
+.home-content {
+  display: flex;
+  .content {
+    width: 100%;
+
+    .item-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 5px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background-color: #dbdbdb67;
+      }
+    }
+
+    .content__header {
+      width: calc(100% - 40px);
+      height: 62px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      justify-content: space-between;
+      background: rgba(178, 187, 184, 0.5);
+      border-bottom: 1px solid #a8a7a7cc;
+      color: #fff;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .favorite:hover {
+          color: orange;
+        }
+
+        .board__name {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .actions {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-right: 20px;
+          border-right: 1px solid #ccc;
+        }
+        .project__setting {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .avatar {
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          .share {
+            padding: 5px 6px;
+            border-radius: 3px;
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            justify-content: center;
+            background-color: #dfe1e6;
+            color: #4a4a4a;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #fff;
+            }
+          }
+
+          .more {
+            padding: 5px 6px;
+          }
+        }
+      }
+    }
+
+    .content__body {
+      padding: 12px 0;
+      display: flex;
+      gap: 12px;
+      max-width: calc(100vw - 200px);
+      overflow-x: auto;
+      height: calc(100vh - 140px);
+      margin: 0 12px;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+        border-radius: 12px;
+        background-color: #dcdcdc; /* or add it to the track */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #b0b0b0;
+        border-radius: 12px;
+      }
+
+      .listColumn {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  }
+}
